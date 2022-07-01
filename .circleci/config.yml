@@ -211,7 +211,7 @@ jobs:
           paths:
             - project/.circleci/ansible/inventory.txt 
 
-   #   - destroy-environment
+      - destroy-environment
       - notify_on_failure
 
   configure-infrastructure:
@@ -230,7 +230,7 @@ jobs:
             cd .circleci/ansible
             cat inventory.txt
             ansible-playbook -i inventory.txt configure-server.yml
-   #   - destroy-environment
+      - destroy-environment
       - notify_on_failure
 
   run-migrations:
@@ -252,8 +252,8 @@ jobs:
             then
               curl https://kvdb.io/${KVDB_BUCKET}/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             fi
-#      - destroy-environment
-#      - revert-migrations
+      - destroy-environment
+      - revert-migrations
       - notify_on_failure 
 
   deploy-frontend:
