@@ -1,0 +1,5 @@
+Public Url to GitHub repository: https://github.com/AmrAshraf/cdond-c3-projectstarter
+Public URL for your S3 Bucket: http://udapeople-f2d316f.s3-website-us-east-1.amazonaws.com
+Cloudfront: http://d21q6fw8ov3rux.cloudfront.net/
+Backend Status Check: http://54.90.109.213:3030/api/status
+Promtheus Server: http://44.204.82.216:9090
